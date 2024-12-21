@@ -1,0 +1,13 @@
+__pycache__
+
+.vscode
+.idea
+.history
+.DS_Store
+
+Data/*
+!Data/custom_configs
+Data/custom_configs/*
+!Data/custom_configs/template.cf
+
+test.ipynb

@@ -1,0 +1,41 @@
+{
+  "task_name": "",
+  "dataset_name": "CroVul",                 // "CroVul", "FUNDED", "MINE", "SIMPLE"
+  "preprocess": {
+    "method": "RAW",                        // "RAW", "WORD2VEC", "CODE2VEC", "RAW_WO_RENAME"
+    "proportion": [8, 1, 1],                // meaning: "[train, val, test]"
+    "origin_data_path_pattern": "/home/huanghongjun/FiCoVuL/preprocess/data/enhanced/DEPTH_ORIG/*.c",
+  },
+  "model": {
+    "num_of_gat_layers": 4,
+    "num_heads_per_gat_layer": [8, 4, 4, 6],
+    "num_features_per_gat_layer": [64, 32, 64, 64, 64],
+    "graph_representation_size": 512,
+    "num_heads_in_graph_representation": 4,
+    "add_self_loop": true,          // whether to add self_loop in graph
+    "add_reverse_edge": true,      // whether to add reverse relation in graph
+    "add_skip_connection": true,    // skip connection is very important!
+    "enable_global_exchange": true,
+    "bias": true,
+    "dropout": 0.1,
+  },
+  "run": {
+    "manual_seed": null,            // set random seed manually
+    "num_of_epochs": 200,           // number of training epochs
+    "batch_size": 128,              // number of graphs in a real batch
+    /* 一次并行计算的 mini-batch 大小，不会影响更新的 batch 大小 */
+    "loader_batch_size": 32,       // number of graphs when loading a mini-batch
+    "lr": 0.0005,                   // model learning rate
+    "weight_decay": 1e-4,           // L2 regularization on model weights
+    "patience_period": 32,          // number of epochs with no improvement on validation before terminating
+    "classfication_threshold": 0.5, // threshold for positive label
+    "enable_tensorboard": true,     // enable tensorboard logging
+    "console_log_freq": 5,          // log to output console (epoch) freq (None for no logging)
+    "checkpoint_freq": 1,           // checkpoint model saving (epoch) freq (None for no logging)
+    "load_model": null,             // model to be tested or trained again
+    "test_only": false,             // only test is needed
+    "force_cpu": false,             // use CPU if your GPU is too small
+    "alpha": 0.8,                   // alpha for graph loss
+  },
+  "force_refresh": false,            // regenerate the dataset
+}

@@ -1,0 +1,13 @@
+lxml
+pandas
+chardet
+networkx
+tqdm
+pydriller
+jupyter
+notebook
+regex
+pygments
+ftfy
+Beautifulsoup4
+ordered_set
