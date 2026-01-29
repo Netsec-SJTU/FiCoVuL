@@ -23,7 +23,7 @@ def pickle_read(path):
     return content
 
 def data_preprocess():
-    dataset_path = r'/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_RAW'
+    dataset_path = r'../data/datasets/CroVul_RAW'
     MINE_NUM_RELATIONS = 4
     tokenizer = AutoTokenizer.from_pretrained("microsoft/codebert-base")
     model = AutoModel.from_pretrained("microsoft/codebert-base")
@@ -67,8 +67,8 @@ def data_preprocess():
 
             # shape = (1,), BCEWithLogitsLoss doesn't require long/int64 so saving some memory by using float32
             graph_label_list.append(float(graph["label"]))
-        json_save(node_features_list, os.path.join('/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_PRECB', 'features.json'))
-        json_save(edge_index_list, os.path.join('/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_PRECB', 'edges.json'))
-        json_save(graph_label_list, os.path.join('/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_PRECB', 'labels.json'))
+        json_save(node_features_list, os.path.join('../data/datasets/CroVul_PRECB', 'features.json'))
+        json_save(edge_index_list, os.path.join('../data/datasets/CroVul_PRECB', 'edges.json'))
+        json_save(graph_label_list, os.path.join('../data/datasets/CroVul_PRECB', 'labels.json'))
 
 data_preprocess()
