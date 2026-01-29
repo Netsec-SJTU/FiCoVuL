@@ -784,9 +784,9 @@ if __name__ == '__main__':
         "preprocess": {
             "method": PreprocessMethod.RAW,
             "proportion": [8, 1, 1],
-            # /Users/huanghongjun/FiCoVuL/preprocess/data/enhanced/**/*.c
-            # /home/huanghongjun/FiCoVuL/preprocess/data/enhanced/**/*.c
-            "origin_data_path_pattern": "/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/DEPTH_ORIG/*.c",  # path in server
+            # ../preprocess/data/enhanced/**/*.c
+            # ../preprocess/data/enhanced/**/*.c
+            "origin_data_path_pattern": "../data/datasets/DEPTH_ORIG/*.c",  # path in server
         },
         "model": {
             "num_features_per_gat_layer": [128],

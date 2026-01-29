@@ -58,14 +58,14 @@ if True:
 
     print(f"Generating raw dataset of {DatasetName.CroVul.name} ...")
 
-    filenames = glob.glob(r"/Users/huanghongjun/FiCoVuL/preprocess/data/enhanced/CroVul/CVEfixes/*/*.json")
+    filenames = glob.glob(r"../preprocess/data/enhanced/CroVul/CVEfixes/*/*.json")
     cache = {}
     for filename in filenames:
         id = filename.split('/')[-1].split(".")[0]
         content = json_read(filename)
         cache[id] = content
 
-    for filename in glob.glob(r"/Users/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul/*.json"):
+    for filename in glob.glob(r"../data/datasets/CroVul/*.json"):
         id = '-'.join(filename.split('/')[-1].split('-')[:-1])
         if id in cache.keys():
             content = json_read(filename)
