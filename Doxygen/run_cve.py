@@ -233,7 +233,7 @@ if __name__ == '__main__':
     import sqlite3
 
     print(f"Connecting to database {CVE_PATH / 'CVEfixes-20230813.db'} ...", end="")
-    # conn = sqlite3.connect("/Users/huanghongjun/FiCoVuL/preprocess/data/raw/CVEfixes/CVEfixes-2021-06-09.db", timeout=10)
+    # conn = sqlite3.connect("../../preprocess/data/raw/CVEfixes/CVEfixes-2021-06-09.db", timeout=10)
     conn = sqlite3.connect(CVE_PATH / "CVEfixes-20230813.db", timeout=10)
     print("Done")
     df_cwe_classification = pd.read_sql_query(f"""SELECT cve_id, cwe_id FROM cwe_classification WHERE cwe_id IN {tuple(CWE_top26_comprehensive)};""", conn)

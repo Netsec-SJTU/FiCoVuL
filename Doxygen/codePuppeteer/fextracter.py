@@ -910,7 +910,7 @@ def test():
 
 if __name__ == "__main__":
     # import glob
-    # for filename in glob.glob(r"/Users/huanghongjun/Desktop/FiCoVuL/preprocess/data/raw/FUNDED_GitHub/**/**/*.txt"):
+    # for filename in glob.glob(r"../../preprocess/data/raw/FUNDED_GitHub/**/**/*.txt"):
     #     print(filename)
     #     with open(filename, 'r') as fp:
     #         code = fp.read()
@@ -923,7 +923,7 @@ if __name__ == "__main__":
     #             pass
 
     # with open(
-    #         "/Users/huanghongjun/Desktop/FiCoVuL/preprocess/data/raw/FUNDED_GitHub/CWE-369/old_files/ee972197b670dea32b7826835c3966725fcec777.txt",
+    #         "../../preprocess/data/raw/FUNDED_GitHub/CWE-369/old_files/ee972197b670dea32b7826835c3966725fcec777.txt",
     #         'r') as fp:
     #     code = fp.read()
     # fe = FExtracter(code, 'c')
@@ -937,7 +937,7 @@ if __name__ == "__main__":
     test()
 
     # with open(
-    #         r"/Users/huanghongjun/Desktop/FiCoVuL/preprocess/data/raw/FUNDED_GitHub/CWE-665/old_files/14558a9fa3b3a5510a1d360b38935bf2c8296d9b.txt",
+    #         r"../../preprocess/data/raw/FUNDED_GitHub/CWE-665/old_files/14558a9fa3b3a5510a1d360b38935bf2c8296d9b.txt",
     #         'r') as fp:
     #     code = fp.read()
     # fe = FExtracter(code, 'c')
