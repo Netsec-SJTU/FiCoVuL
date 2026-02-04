@@ -415,11 +415,11 @@ Generating raw dataset of WILD ...
 Generating word dict: 106it [00:01, 98.29it/s]
 Generating dataset...
 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 72/72 [00:17<00:00,  4.19it/s]
-/Users/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/WILD_RAW/test.json saved!
+../data/datasets/WILD_RAW/test.json saved!
 Skip 1 samples due to failure.
 Raw dataset of WILD has been generated!
 dict_keys(['task_name', 'dataset_name', 'preprocess', 'model', 'run', 'force_refresh', 'commit_hash', 'perf', 'state_dict'])
-Loading /Users/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/WILD_RAW/test.json...
+Loading ../data/datasets/WILD_RAW/test.json...
 last test:  {'precision': 0.7164276401564538, 'recall': 0.9825659365221279, 'accuracy': 0.792749658002736, 'micro_f1': 0.8286522148916118}
 TEST: 100%|██████████████████████████████████████████████████████████████████████| 1/1 [00:24<00:00, 24.68s/it, last_update=0, loss=0.548, TEST_f1=0.956]
 **************************************************

@@ -32,7 +32,7 @@ config = {
   "preprocess": {
     "method": PreprocessMethod.RAW,
     "proportion": [8, 1, 1],
-    "origin_data_path_pattern": "/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_ORIG/*.c",
+    "origin_data_path_pattern": "../data/datasets/CroVul_ORIG/*.c",
   },
   "model": {
     "num_of_gat_layers": 4,
@@ -58,7 +58,7 @@ config = {
     "enable_tensorboard": True,
     "console_log_freq": 5,
     "checkpoint_freq": 1,
-    "load_model": "/home/huanghongjun/FiCoVuL/FiCoVuL/data/models/gat_CroVul_crovul_graph_focal_045_2_000000.pth",
+    "load_model": "../data/models/gat_CroVul_crovul_graph_focal_045_2_000000.pth",
     "test_only": False,
     "force_cpu": False,
   },
@@ -70,10 +70,10 @@ from dataset.data_preprocess import *
 preprocess_config = config
 
 if True:
-    filenames = glob.glob(rf"/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul/*.json")
-    type_map = pickle_read("/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_RAW/node_type_dict.pkl")
-    lexical_map = pickle_read("/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_RAW/word_lexical_dict.pkl")
-    value_map = pickle_read("/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/CroVul_RAW/word_value_dict.pkl")
+    filenames = glob.glob(rf"../data/datasets/CroVul/*.json")
+    type_map = pickle_read("../data/datasets/CroVul_RAW/node_type_dict.pkl")
+    lexical_map = pickle_read("../data/datasets/CroVul_RAW/word_lexical_dict.pkl")
+    value_map = pickle_read("../data/datasets/CroVul_RAW/word_value_dict.pkl")
 
     total_filenames = []
     for filename in filenames:
@@ -396,6 +396,6 @@ for mini_batch_idx, (node_features, gt_graph_labels, edge_index, node_to_graph_m
 
     bar.set_postfix({"size": dataset0.shape[0]})
 
-np.save("/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/node_level/crovul_data1016.npy", dataset0)
-np.save("/home/huanghongjun/FiCoVuL/FiCoVuL/data/datasets/node_level/crovul_label1016.npy", dataset1)
+np.save("../data/datasets/node_level/crovul_data1016.npy", dataset0)
+np.save("../data/datasets/node_level/crovul_label1016.npy", dataset1)
 

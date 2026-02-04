@@ -782,8 +782,8 @@ if __name__ == '__main__':
         "preprocess": {
             "method": PreprocessMethod.RAW,
             "proportion": [8, 1, 1],
-            # /Users/huanghongjun/FiCoVuL/preprocess/data/enhanced/**/*.c
-            # /home/huanghongjun/FiCoVuL/preprocess/data/enhanced/**/*.c
+            # ../preprocess/data/enhanced/**/*.c
+            # ../preprocess/data/enhanced/**/*.c
             "origin_data_path_pattern": "../data/datasets/CroVulNew_ORIG/*.c",  # path in server
         },
         "model": {
